@@ -50,7 +50,7 @@ where:
 - \( q \) = heat duty,
 - \( U \) = overall heat transfer coefficient,
 - \( A \) = heat exchanger area,
-- $ \Delta T_{lm} $= log mean temperature difference.
+- $\Delta T_{lm}$ = log mean temperature difference.
 
 🔥 **Opportunity:** Waste heat recovery could significantly **lower energy costs**!
 
