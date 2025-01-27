@@ -1,14 +1,14 @@
-%GKTstud3 
+%bubblepoint temperature
 
 clc, clf, clear
 
-%Antoine constants for degC, mmHg, log10
-A1=7.02447; B1=1161.00; C1=224; %acetone
-A2=7.87863; B2=1473.11; C2=230; %methanol
+%Antoine constants for degC, mmHg, log10, look up constants for spec. substance
+A1=; B1=; C1=; 
+A2= B2=; C2=; 
 
 P=760; %mmHg %total pressure
 
-%kokpkt
+%boilingpoint
 Tb1=B1./(A1-log10(P))-C1;
 Tb2=B2./(A2-log10(P))-C2;
 
@@ -23,9 +23,9 @@ Pv2=10.^(A2-(B2./(Tstart+C2)));
 x1=0:0.01:1;
 x2=(1-x1);
 
-%Wilson parameters
-w12=0.65675;
-w21=0.77204;
+%Wilson parameters, look up for substance
+w12=;
+w21=;
 
 %activity coefficients at x1
 gamma1=exp(-log(x1+w12.*x2)+x2.*(w12./(x1+w12.*x2)-w21./(x2+w21.*x1)));
