@@ -18,7 +18,7 @@ $$
 This is an **endothermic reaction**, meaning it requires heat to happen correctly. The equilibrium conversion depends on **temperature, pressure, and reactor design**. The goal is to **maximize propylene yield** while minimizing costs and energy consumption.
 
 ## 🚀 The Process Flow
-This is the big challange in the project. To come up with the set up that is presented here we have to go back and forth comparing different designs and the outcome they give. This is the most time-consuming part of the project but also the most important. It is also here we have to decide what key-factors we would like to focus on. We want it to produce a certain amount every year but we can choose to do that in a environmentally friendly way which may cost more or we can do it in a less costly way. The design that that was choosen it showcased below. 
+This is the big challange in the project. To come up with the set-up that is presented here we have to go back and forth comparing different designs and the outcome they give. This is the most time-consuming part of the project but also the most important. It is also here we have to decide what key-factors we would like to focus on. We want it to produce a certain amount every year but we can choose to do that in a environmentally friendly way which may cost more or we can do it in a less costly way. The design that that was choosen is showcased below. 
 
 The process is broken down into several key steps:
 
