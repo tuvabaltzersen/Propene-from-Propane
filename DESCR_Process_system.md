@@ -117,10 +117,8 @@ Another challenge is to make a system that meets the demand. Here we want a larg
 
 ## 🔧 MATLAB Implementation
 The codes given in this repository is not the whole code for the design we did but the fundamental parts to create a system like that. 
-✔ **Reactor design** (`reactor_model.m`)  
-✔ **Heat exchanger calculations** (`heat_exchange.m`)  
-✔ **Flash separation** (`flash_calcs.m`)  
-✔ **Distillation design** (`distillation_model.m`)  
-✔ **Economic analysis** (`cost_analysis.m`)  
-
+- Sorel's method
+- Find the bubblepoint for a mixture
+- profit for heat exchangers
+- 
 
