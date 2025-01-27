@@ -2,26 +2,26 @@
 
 clear all
 P=760; %mmHg
-q= 0.8; 
-zfa=0.35;   % total conc. of A in the inflow
-xfa=0.3063; % conc. of A in the liquid inflow
-xd=0.9;
-xw=0.1;     % component x in the bottom part of the column 
-F=250;      % feed kmol/h
-R=3;        % reflux ratio
+q= ;   
+zfa=;   % total conc. of A in the inflow
+xfa=; % conc. of A in the liquid inflow
+xd=;      %component x in the beginin of the column
+xw=;     % component x in the bottom part of the column 
+F=;      % feed kmol/h
+R=;        % reflux ratio
 
 %Antoine constants (for mmHg, celcius, 10log)
-%Ant_a=[6.90565 1211.033 220.790];
-A1=6.90565;
-B1=1211.033;
-C1=220.790;
-%Ant_b=[6.95464 1344.800 219.482];
-A2=6.95464;
-B2=1344.800;
-C3=219.482;
+%Ant_a=[A1 B1 C1];
+A1=;
+B1=;
+C1=;
+%Ant_b=[A2 B2 C2];
+A2=;
+B2=;
+C3=;
 
-gamma1=1;
-gamma2=2;
+gamma1=;
+gamma2=;
 
 
 % balances over column
@@ -59,44 +59,44 @@ while y(i)<xd
 end
 
 %heat demand reboiler
-%Calculation of the temperature in the reboiler (Bubblepoint) (HINT Bubbelpunkt i flash från S3)
-TK=95.5+273;
-% The temperature needs to be put in Kelvin!!
+%Calculation of the temperature in the reboiler (Bubblepoint) kelvin
+TK=;
+
 
 % Composition out of reboiler
 x1=y0;              % Component A, mole fractions Vstreck
 x2=1-y0;            % Component B, mole fractions Vstreck
 
 % Calculation of enthalpies in gas phase
-aAg=0.69381e5;
-bAg=0.6752e1;
-cAg=0.13199;
-aBg=0.31596e5;
-bBg=0.15841e2;
-cBg=0.15429;
+aAg=;
+bAg=;
+cAg;
+aBg=;
+bBg=;
+cBg=;
 
 HA=aAg+bAg*TK+cAg*TK^2; % TK needs to be in Kelvin
 HB=aBg+bBg*TK+cBg*TK^2; % TK needs to be in Kelvin
-Hblandningg=x1*HA+x2*HB; % enthalpy of the mixture [kJ/kmol] 
+Hmixg=x1*HA+x2*HB; % enthalpy of the mixture [kJ/kmol] 
 
-%Enthalpy liquid phase (see the gas phase calculations above)
-aAv=0.19534e5;
-bAv=0.63711e2;
-cAv=0.12206;
-aBv=-0.12588e5;
-bBv=0.14150e2;
-cBv=0.23130;
+%Enthalpy liquid phase 
+aAv=;
+bAv=;
+cAv=;
+aBv=;
+bBv=;
+cBv=;
 
 hA=aAv+bAv*TK+cAv*TK^2;
 hB=aBv+bBv*TK+cBv*TK^2;
-hblandningv=HA*xw+HB*(1-xw); %kJ/kmol 
+hmixv=HA*xw+HB*(1-xw); %kJ/kmol 
 
-Q_reboiler=v*Hblandningg/3600;        % convert the enthalpies into [kW] 
+Q_reboiler=v*Hmixg/3600;        % convert the enthalpies into [kW] 
 
-disp(['överförd effekt' num2str(round(Q_reboiler)),'kW'])
-disp(['bottnar nedre del' num2str(m)])
-disp(['bottnar övre del' num2str(i-m)])
-disp(['bottnar totalt' num2str(i)])
+disp(['transmitted power' num2str(round(Q_reboiler)),'kW'])
+disp(['trays bottom part' num2str(m)])
+disp(['trays upper part' num2str(i-m)])
+disp(['trays tot' num2str(i)])
 
 figure(1);
 plot(1:i,y,'r');
@@ -104,13 +104,13 @@ hold on
 plot(1:i,x,'b');
 legend('y1','x1');
 ylabel('x1,y1');
-xlabel('Botten nr (Räknat från återkokaren)');
+xlabel('trays nr (calc. from reboiler)');
 
 %Minimum reflux ratio
 
 yfa=5/3-5/(3+4.5*xfa);
 Rmin=(xd-yfa)/(yfa-xfa);            % (LV)min = Rmin/(Rmin+1)
-disp(['Minsta återflödesförhålland:',num2str(Rmin)])
+disp(['Min reflux ratio:',num2str(Rmin)])
 
 
 
